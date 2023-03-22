@@ -1,7 +1,8 @@
-
 exports.initialize = function () {
   addScrollOffsetClass()
   calculateBannerHeight()
+  includeHTML()
+  initializeLanguageSelector()
 }
 
 function calculateBannerHeight () {
@@ -24,4 +25,43 @@ function addScrollOffsetClass () {
   headings.forEach(heading => {
     heading.classList.add('scroll-offset')
   })
+}
+
+function includeHTML() {
+  const elements = document.querySelectorAll('[data-include]');
+
+  elements.forEach((element) => {
+    const file = element.getAttribute('data-include');
+    fetch(file)
+      .then((response) => {
+        if (response.status === 200) {
+          return response.text();
+        }
+        throw new Error('File not found');
+      })
+      .then((html) => {
+        element.innerHTML = html;
+      })
+      .catch((error) => {
+        console.error('Error including HTML file:', error);
+      });
+  });
+}
+
+function initializeLanguageSelector() {
+  const languageSelect = document.getElementById("language-select");
+
+  if (languageSelect) {
+    languageSelect.addEventListener("change", (event) => {
+      const selectedLanguage = event.target.value;
+      changeLanguage(selectedLanguage);
+    });
+  }
+}
+
+function changeLanguage(language) {
+  // Implement your language switching logic here
+  // For example, you could load different language files
+  // or use an API to translate the content of your website
+  console.log(`Selected language: ${language}`);
 }
