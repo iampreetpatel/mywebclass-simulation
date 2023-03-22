@@ -21,22 +21,25 @@ window.addEventListener('resize', () => {
   }, 250)
 })
 
-function createPrivacyModal () {
+function createPrivacyModal() {
   const modalHtml = `
     <div class="modal fade" id="privacyModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Privacy Policy</h5>
+            <h5 class="modal-title">Your Privacy Matters</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
-            <p>Please read our <a href="privacy.html" target="_blank">Privacy Policy</a> carefully before using our website.</p>
-            <p>Do you agree to our Privacy Policy?</p>
+            <p>At MyWebClass.org, we are committed to protecting your privacy and providing you with a transparent and secure online experience. To do this, we need your consent to collect and process your personal data.</p>
+            <p>By clicking "I Agree," you consent to the collection, use, and storage of your personal data as described in our Privacy Policy. This information will be used to enhance your experience on our website, personalize content, and serve relevant advertisements.</p>
+            <p>If you do not wish to provide your consent, please click "I Disagree." However, please note that some features of our website may not function properly without access to your personal data.</p>
+            <p>For more information about how we handle your personal data, please review our <a href="privacy-policy.html">Privacy Policy</a>. If you have any questions or concerns, do not hesitate to contact us at <a href="mailto: [email protected]"> [email protected]</a>.</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Disagree</button>
-            <button type="button" class="btn btn-primary" id="agreeButton">Agree</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">I Disagree</button>
+            <button type="button" class="btn btn-primary" id="agreeButton">I Agree</button>
           </div>
         </div>
       </div>
@@ -47,7 +50,41 @@ function createPrivacyModal () {
   document.body.insertAdjacentHTML('beforeend', modalHtml)
 }
 
-function initializePrivacyModal () {
+function loadGoogleAnalytics() {
+  // Replace "GA_MEASUREMENT_ID" with your Google Analytics Measurement ID
+  const gaMeasurementId = 'J2FCEQRZJ1'
+
+  // Load the Google Analytics tracking code
+  const script = document.createElement('script')
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`
+  script.async = true
+  document.head.appendChild(script)
+
+  // Initialize Google Analytics tracking
+  window.dataLayer = window.dataLayer || []
+  function gtag() { dataLayer.push(arguments) }
+  gtag('js', new Date())
+  gtag('config', gaMeasurementId, { anonymize_ip: true })
+
+  // Check if the user has provided consent for Google Analytics tracking
+  const consent = localStorage.getItem('googleAnalyticsConsent')
+  if (consent === 'granted') {
+    // Enable Google Analytics tracking if consent has been granted
+    gtag('consent', 'update', {
+      analytics_storage: 'granted'
+    })
+  } else if (consent === 'denied') {
+    // Disable Google Analytics tracking if consent has been denied
+    gtag('consent', 'update', {
+      analytics_storage: 'denied'
+    })
+  } else {
+    // Show the privacy modal if no consent has been given
+        initializePrivacyModal()
+  }
+}
+
+function initializePrivacyModal() {
   const privacyModal = new Modal(document.getElementById('privacyModal'))
 
   // Check if the user has already agreed to the policy
@@ -69,43 +106,21 @@ function initializePrivacyModal () {
       analytics_storage: 'granted'
     })
   })
-}
 
-function loadGoogleAnalytics () {
-  // Replace "GA_MEASUREMENT_ID" with your Google Analytics Measurement ID
-  const gaMeasurementId = 'J2FCEQRZJ1'
-
-  // Load the Google Analytics tracking code
-  const script = document.createElement('script')
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`
-  script.async = true
-  document.head.appendChild(script)
-
-  // Initialize Google Analytics tracking
-  window.dataLayer = window.dataLayer || []
-  function gtag () { dataLayer.push(arguments) }
-  gtag('js', new Date())
-  gtag('config', gaMeasurementId, { anonymize_ip: true })
-
-  // Check if the user has provided consent for Google Analytics tracking
-  const consent = localStorage.getItem('googleAnalyticsConsent')
-  if (consent === 'granted') {
-    // Enable Google Analytics tracking if consent has been granted
-    gtag('consent', 'update', {
-      analytics_storage: 'granted'
-    })
-  } else if (consent === 'denied') {
-    // Disable Google Analytics tracking if consent has been denied
+  // Handle the click event on the Disagree button
+  const disagreeButton = document.querySelector('.btn.btn-secondary')
+  disagreeButton.addEventListener('click', () => {
+    // Remember the user's choice
+    localStorage.setItem('privacyPolicyAgreed', 'false')
+    // Disable Google Analytics tracking
     gtag('consent', 'update', {
       analytics_storage: 'denied'
     })
-  } else {
-    // Show the privacy modal if no consent has been given
-    initializePrivacyModal()
-  }
+  })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   createPrivacyModal()
   loadGoogleAnalytics()
+  initializePrivacyModal()
 })
