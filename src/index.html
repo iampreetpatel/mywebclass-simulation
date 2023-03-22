@@ -33,6 +33,17 @@
     <link rel="preload" href="src/scss/styles.scss" as="style">
 </head>
 
+<body>
+    <!-- language_switcher.html -->
+    <div class="language-switcher">
+        <label for="language-select">Select Language:</label>
+        <select id="language-select" name="language-select">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+        </select>
+    </div>
+
 <body class="pt-5">
 <div class="container-fluid">
     <header role="banner" class="fixed-top">
@@ -50,6 +61,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="content.html">Content Template</a>
                         </li>
+
+                         <li class="nav-item">
+                            <div data-include="language_switcher.html"></div>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -121,6 +137,9 @@
         </div>
     </footer>
 </div>
+
+<script src="src/js/allPages.js"></script>
+
 </body>
 
 </html>
