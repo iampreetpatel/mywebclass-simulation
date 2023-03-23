@@ -2,17 +2,29 @@
 <html lang="EN">
 
 <head>
-    <!--characterset UTF-8 Watch this: https://youtu.be/MijmeoH9LT4 -->
-
     <title>MyWebClass.org</title>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--Basic meta info -->
-    <meta name="keywords" content="My Webclass Homepage">
-    <meta name="author" content="Keith Williams"/>
-    <meta name="description" content="A project to help educators integrate new technoliges into their teaching">
+    <meta name="keywords" content="Software Engineering Classes">
+    <meta name="author" content="Brandon Sibanda and Chun Lo"/>
+    <meta name="description" content="Master software engineering with our online courses. Learn coding fundamentals, advanced design, and the latest tools and technologies. Start now!">
+
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1B1CMDTBC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N1B1CMDTBC');
+</script>
+
+
+    <!--characterset UTF-8 Watch this: https://youtu.be/MijmeoH9LT4 -->
 
     <!--OpenGraph meta -->
     <meta property="og:title" content=""/>
@@ -22,12 +34,23 @@
 
 </head>
 
+<body>
+    <!-- language_switcher.html -->
+    <div class="language-switcher">
+        <label for="language-select">Select Language:</label>
+        <select id="language-select" name="language-select">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+        </select>
+    </div>
+
 <body class="pt-5">
 <div class="container-fluid">
     <header role="banner" class="fixed-top">
         <nav role="navigation" aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="/">MyWebClass.org</a>
+                <a class="navbar-brand" href="https://chunlohk.github.io/mywebclass-simulation/">MyWebClass.org</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -39,6 +62,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="content.html">Content Template</a>
                         </li>
+
+                         <li class="nav-item">
+                            <div data-include="language_switcher.html"></div>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -48,19 +76,19 @@
         <div class="container my-5">
             <div class="row p-4 pb-0 pe-lg-0 pt-lg-0 align-items-center rounded-3 border shadow-lg ">
                 <div class="col-lg-7 p-3 p-lg-3 pt-lg-1">
-                    <h1 class="display-6 fw-bold lh-1">Revolutionize your teaching</h1>
-                    <p class="lead">Empower your students with cutting-edge software engineering skills. Join
-                        MyWebClass and discover advanced technologies that will transform your teaching and their
+                    <h1 class="display-6 fw-bold lh-1">Rethink the ways of teaching!</h1>
+                    <p class="lead">Keep yourself in trend! Empower your students with cutting-edge software engineering skills. Join
+                        MyWebClass and discover advanced software engineering technologies that will transform your teaching and their
                         learning journey.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                        <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Start
-                            Here
+                        <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Let's get
+                            Started!
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                    <img class="rounded-lg-3 img-fluid" src="assets/images/teacher.gif"
-                         alt="a teacher with students" width="720">
+                    <img class="rounded-lg-3 img-fluid" src="assets/images/KidsLearnAI.png"
+                         alt="a teacher educating students on software engineering" title="Students taking MyWebClass software engineering classes" width="720">
                 </div>
             </div>
         </div>
@@ -99,7 +127,7 @@
             <div class="col-md-5 offset-md-1 mb-3">
                 <form>
                     <h5>Subscribe to our newsletter</h5>
-                    <p>Monthly digest of what's new and exciting from us.</p>
+                    <p>Monthly digest of what's new and exciting in the software engineering field.</p>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                         <label for="newsletter1" class="visually-hidden">Email address</label>
                         <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
@@ -110,6 +138,9 @@
         </div>
     </footer>
 </div>
+
+<script src="js/allPages.js"></script>
+
 </body>
 
 </html>
