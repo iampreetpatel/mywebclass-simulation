@@ -38,7 +38,7 @@ function createPrivacyModal() {
             <p><a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" id="disagreeButton">I Disagree</button>
+            <button type="button" class="btn btn-secondary">I Disagree</button>
             <button type="button" class="btn btn-primary" id="agreeButton">I Agree</button>
           </div>
         </div>
@@ -50,8 +50,7 @@ function createPrivacyModal() {
   document.body.insertAdjacentHTML('beforeend', modalHtml)
 }
 
-
-function initializePrivacyModal () {
+function initializePrivacyModal() {
   const privacyModal = new Modal(document.getElementById('privacyModal'))
 
   // Check if the user has already agreed to the policy
@@ -75,15 +74,23 @@ function initializePrivacyModal () {
   })
 
   // Handle the click event on the Disagree button
-  const disagreeButton = document.querySelector('#privacyModal .modal-footer .btn-secondary')
-  disagreeButton.addEventListener('click', () => {
-    // Redirect to a blank page
-    window.location.href = 'about:blank'
+  const disagreeButton = document.querySelector('.btn.btn-secondary')
+  disagreeButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    // Remember the user's choice
+    localStorage.setItem('privacyPolicyAgreed', 'false')
+    // Disable Google Analytics tracking
+    gtag('consent', 'update', {
+      analytics_storage: 'denied'
+    })
+    // Hide the modal
+    privacyModal.hide()
+    // Redirect to GitHub
+    window.location.href = 'https://github.com'
   })
 }
 
 function loadGoogleAnalytics() {
-
   // Replace "GA_MEASUREMENT_ID" with your Google Analytics Measurement ID
   const gaMeasurementId = 'J2FCEQRZJ1'
 
@@ -113,45 +120,8 @@ function loadGoogleAnalytics() {
     })
   } else {
     // Show the privacy modal if no consent has been given
-        initializePrivacyModal()
+    initializePrivacyModal()
   }
-}
-
-function initializePrivacyModal() {
-  const privacyModal = new Modal(document.getElementById('privacyModal'))
-
-  // Check if the user has already agreed to the policy
-  const agreed = localStorage.getItem('privacyPolicyAgreed') === 'true'
-  if (!agreed) {
-    // Show the modal if the user hasn't agreed
-    privacyModal.show()
-  }
-
-  // Handle the click event on the Agree button
-  const agreeButton = document.getElementById('agreeButton')
-  agreeButton.addEventListener('click', () => {
-    // Remember the user's choice
-    localStorage.setItem('privacyPolicyAgreed', 'true')
-    // Hide the modal
-    privacyModal.hide()
-    // Enable Google Analytics tracking
-    gtag('consent', 'update', {
-      analytics_storage: 'granted'
-    })
-  })
-
-  // Handle the click event on the Disagree button
-  const disagreeButton = document.querySelector('.btn.btn-secondary')
-  disagreeButton.addEventListener('click', () => {
-    // Remember the user's choice
-    localStorage.setItem('privacyPolicyAgreed', 'false')
-    // Disable Google Analytics tracking
-    gtag('consent', 'update', {
-      analytics_storage: 'denied'
-    })
-    // Redirect to github.com
-    window.location.href = 'https://github.com'
-  })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
