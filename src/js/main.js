@@ -38,7 +38,7 @@ function createPrivacyModal() {
             <p><a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">I Disagree</button>
+            <button type="button" class="btn btn-secondary" id="disagreeButton">I Disagree</button>
             <button type="button" class="btn btn-primary" id="agreeButton">I Agree</button>
           </div>
         </div>
@@ -149,8 +149,8 @@ function initializePrivacyModal() {
     gtag('consent', 'update', {
       analytics_storage: 'denied'
     })
-    // Redirect to a blank page
-    window.location.href = 'about:blank'
+    // Redirect to github.com
+    window.location.href = 'https://github.com'
   })
 }
 
