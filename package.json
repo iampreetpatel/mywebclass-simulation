@@ -48,6 +48,7 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^2.7.2",
+    "playwright": "^1.32.0",
     "postcss-loader": "^7.0.2",
     "purgecss-webpack-plugin": "^5.0.0",
     "sass": "^1.58.3",
