@@ -34,8 +34,8 @@ function createPrivacyModal() {
             <p>At MyWebClass.org, we are committed to protecting your privacy and providing you with a transparent and secure online experience. To do this, we need your consent to collect and process your personal data.</p>
             <p>By clicking "I Agree," you consent to the collection, use, and storage of your personal data as described in our Privacy Policy. This information will be used to enhance your experience on our website, personalize content, and serve relevant advertisements.</p>
             <p>If you do not wish to provide your consent, please click "I Disagree." However, please note that some features of our website may not function properly without access to your personal data.</p>
-            <p>For more information about how we handle your personal data, please review our <a href="privacy-policy.html">Privacy Policy</a>. If you have any questions or concerns, do not hesitate to contact us at <a href="mailto: [email protected]"> [email protected]</a>.</p>
-            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
+            <p>For more information about how we handle your personal data, please review our <a href="privacy.html">Privacy Policy</a>. If you have any questions or concerns, do not hesitate to contact us at <a href="mailto: cyl4@njit.edu"> [Developer Email]</a>.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">I Disagree</button>
