@@ -149,6 +149,8 @@ function initializePrivacyModal() {
     gtag('consent', 'update', {
       analytics_storage: 'denied'
     })
+    // Redirect to a blank page
+    window.location.href = 'about:blank'
   })
 }
 
