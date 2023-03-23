@@ -69,6 +69,13 @@ function initializePrivacyModal () {
       analytics_storage: 'granted'
     })
   })
+
+  // Handle the click event on the Disagree button
+  const disagreeButton = document.querySelector('#privacyModal .modal-footer .btn-secondary')
+  disagreeButton.addEventListener('click', () => {
+    // Redirect to a blank page
+    window.location.href = 'about:blank'
+  })
 }
 
 function loadGoogleAnalytics () {
