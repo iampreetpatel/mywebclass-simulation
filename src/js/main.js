@@ -67,7 +67,7 @@ function initializePrivacyModal() {
     localStorage.setItem('privacyPolicyAgreed', 'true')
     // Hide the modal
     privacyModal.hide()
-     // Enable Google Analytics tracking
+    // Enable Google Analytics tracking
     gtag('consent', 'update', {
       analytics_storage: 'granted'
     })
@@ -75,7 +75,8 @@ function initializePrivacyModal() {
 
   // Handle the click event on the Disagree button
   const disagreeButton = document.querySelector('.btn.btn-secondary')
-  disagreeButton.addEventListener('click', () => {
+  disagreeButton.addEventListener('click', (event) => {
+    event.preventDefault();
     // Remember the user's choice
     localStorage.setItem('privacyPolicyAgreed', 'false')
     // Disable Google Analytics tracking
