@@ -38,7 +38,7 @@ function createPrivacyModal() {
             <p><a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary">I Disagree</button>
+            <button type="button" class="btn btn-secondary" id="disagreeButton">I Disagree</button>
             <button type="button" class="btn btn-primary" id="agreeButton">I Agree</button>
           </div>
         </div>
@@ -74,7 +74,7 @@ function initializePrivacyModal() {
   })
 
   // Handle the click event on the Disagree button
-  const disagreeButton = document.querySelector('.btn.btn-secondary')
+  const disagreeButton = document.getElementById('disagreeButton')
   disagreeButton.addEventListener('click', (event) => {
     event.preventDefault();
     // Remember the user's choice
