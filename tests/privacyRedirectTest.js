@@ -14,7 +14,7 @@ const { chromium } = require('playwright');
   // Click the privacy policy link and wait for navigation
   await Promise.all([
     page.waitForNavigation(),
-    page.click('#privacyModal .modal-body a[href="privacy.html"]'),
+    page.click('#privacyModal .modal-body a[href="privacy.html"]')
   ]);
 
   // Check if the page has been redirected to the privacy policy page
@@ -34,7 +34,7 @@ const { chromium } = require('playwright');
   // Click the contact us link and wait for navigation
   await Promise.all([
     page.waitForNavigation(),
-    page.click('#privacyModal .modal-body a[href="contact.html"]'),
+    page.click('#privacyModal .modal-body a[href="contact.html"]')
   ]);
 
   // Check if the page has been redirected to the contact us page
