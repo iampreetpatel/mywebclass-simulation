@@ -2,9 +2,8 @@
 <html lang="EN">
 
 <head>
-    <title>MyWebClass.org</title>
+    <title>MyWebClass.org | Contact Form</title>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--Basic meta info -->
@@ -12,46 +11,97 @@
     <meta name="author" content="Brandon Sibanda and Chun Lo"/>
     <meta name="description" content="Contact Page for Development Questions">
 
-        <!--OpenGraph meta -->
+    <!--OpenGraph meta -->
     <meta property="og:title" content=""/>
     <meta property="og:description" content=""/>
     <meta property="og:image" content="assets/images/logo.png"/>
     <meta property="og:url" content=""/>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1B1CMDTBC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1B1CMDTBC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-N1B1CMDTBC');
-</script>
+        gtag('config', 'G-N1B1CMDTBC');
+    </script>
+
+    <style>
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .intro {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            max-width: 400px;
+            padding: 1.5rem;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        .contact-form {
+            max-width: 400px;
+        }
+    </style>
 
 </head>
 
-
-	<body class="pt-5">
-<div class="container-fluid">
-    <header role="banner" class="fixed-top">
-        <nav role="navigation" aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="https://chunlohk.github.io/mywebclass-simulation/">MyWebClass.org</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Toggle navigation</span>
-                </button>
-            </div>
-        </nav>
+<body class="pt-5">
+    <div class="container-fluid">
+        <header role="banner" class="fixed-top">
+            <nav role="navigation" aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="https://chunlohk.github.io/mywebclass-simulation/">MyWebClass.org</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Toggle navigation</span>
+                    </button>
+                </div>
+            </nav>
         </header>
     </div>
 
-    <p> Hello this is my email: cyl4@njit.edu</p>
+    <div class="content-wrapper">
+                <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form action="mailto:cyl4@njit.edu" method="post" enctype="text/plain">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
 
-    </body>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
 
+                <label for="phone">Phone:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br><br>
+
+                <label for="needs">Express your needs:</label><br>
+                <textarea id="needs" name="needs" rows="4" cols="50" required></textarea><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="intro">
+            <h1>Welcome to MyWebClass.org!</h1>
+            <p>
+                We're here to help you learn and grow. Our team of experienced educators is dedicated to providing you with the best online learning experience. If you have any questions or need assistance, please don't hesitate to contact us. We're always happy to help!
+            </p>
+            <p>
+                Just fill out the contact form below, and one of our friendly team members will get back to you as soon as possible.
+            </p>
+        </div>
+
+
+    </div>
+</body>
 
 
 </html>
