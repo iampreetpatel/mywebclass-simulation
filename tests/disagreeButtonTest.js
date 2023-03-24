@@ -14,7 +14,7 @@ const { chromium } = require('playwright');
   // Click the "I Disagree" button
   await Promise.all([
     page.waitForNavigation(),
-    page.click('#disagreeButton'),
+    page.click('#disagreeButton')
   ]);
 
   // Check if the page has been redirected to 'https://github.com'
