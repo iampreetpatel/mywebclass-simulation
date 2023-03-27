@@ -64,3 +64,5 @@ Finally, use Playwright to create powerful and reliable automated tests for web 
 
 
 # ADD YOUR PROJECT LINKS BELOW THIS 
+- [Webclass website](https://iampreetpatel.github.io/mywebclass-simulation/)
+- [Webclass Wiki](https://github.com/iampreetpatel/mywebclass-simulation.wiki.git)
