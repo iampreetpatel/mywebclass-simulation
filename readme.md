@@ -65,3 +65,4 @@ Finally, use Playwright to create powerful and reliable automated tests for web 
 
 # ADD YOUR PROJECT LINKS BELOW THIS 
 [Project Website](https://chunlohk.github.io/mywebclass-simulation/)
+[DevOps Documentation](https://github.com/chunlohk/mywebclass-simulation/blob/master/DevOpsDocumenatation.md)
