@@ -8,7 +8,7 @@ In order to install the project on a Windows or Mac computer, the following step
 4. In the settings under Secrets and variables, select actions and enter your DOCKER_USERNAME and DOCKER_PASSWORD as individual secrets.
 5. Create an SSH public/private key pair using powershell (Windows) or terminal (MAC) and in your account settings add the whole SSH key.
 6. Open PyCharm and copy the SSH link to clone into PyCharm.
-7. Go into settings and search nodejs and change the path to point to the nodejs download
+7. Go into settings and search nodejs and change the path to point to the nodejs download.
 8. Run npm install
 9. Now you can then make changes to the code as you wish.
 
