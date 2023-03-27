@@ -7,7 +7,7 @@ Productivity Log:
 | Accessibility Research                   | 5            | https://github.com/chunlohk/mywebclass-simulation/issues/4   | Complete    | Chun and Brandon | 03/20       | 03/26        | Docs        |              |
 | Internationalization Research            | 4            | https://github.com/chunlohk/mywebclass-simulation/issues/10  | Complete    | Chun and Brandon | 03/20       | 03/22        | Docs        |              |
 | Homepage                                 | 9            | https://github.com/chunlohk/mywebclass-simulation/issues/14  | Complete    | Chun             | 03/20       | 03/22        | Feature     |              |
-| Content Template                         | 9            | https://github.com/bsibanda3/mywebclass-simulation/issues/3  | Complete    | Chun             | 03/20       | 03/24        | Feature     |              |
+| Content Template                         | 9            | https://github.com/chunlohk/mywebclass-simulation/issues/3   | Complete    | Chun             | 03/20       | 03/24        | Feature     |              |
 | Team Improvement Plan                    | 5            | https://github.com/chunlohk/mywebclass-simulation/issues/13  | Complete    | Brandon          | 03/20       | 03/24        | Docs        |              |
 | DevOps and SRE                           | 9            | https://github.com/chunlohk/mywebclass-simulation/issues/6   | Complete    | Brandon          | 03/20       | 03/25        | DevOps Task |              |
 | Playwright Testing                       | 9            | https://github.com/chunlohk/mywebclass-simulation/issues/7   | Complete    | Chun and Brandon | 03/20       | 03/25        | Feature     |              |
