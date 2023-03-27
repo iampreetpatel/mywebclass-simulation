@@ -11,9 +11,24 @@ color:#fff;}
 
 .bg-dark-custom{
 background-color:#0d1b2a;
+
 }
 .pd-5{
 padding-top:3rem;}
 
 .border-round{
 border-radius:8px;}
+
+.flex-1{
+flex:1;}
+
+.flex-divide{
+display:flex;
+justify-content: space-between !important;
+align-items:center;}
+
+.flex-divide ul{
+display:flex;
+justify-content: center;
+align-items:center;
+}

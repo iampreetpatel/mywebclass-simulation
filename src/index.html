@@ -11,6 +11,9 @@
      function gtag(){dataLayer.push(arguments);}
      gtag('js', new Date());
      gtag('config', 'G-5KZZ1FSVYL');
+
+
+
     </script>
 
     <title>MyWebClass.org</title>
@@ -29,9 +32,9 @@
     <meta property="og:image" content="assets/images/logo.png"/>
     <meta property="og:url" content=""/>
 
-     <!-- Add Custom CSS -->
+    <!-- Add Custom CSS -->
     <link href="./css/main.css" rel="stylesheet" type="text/css"/>
-     <!-- Add Bootstrap CSS -->
+    <!-- Add Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Add jQuery -->
@@ -49,15 +52,15 @@
 <div class="container-fluid bg-dark-custom-1">
     <header role="banner" class="fixed-top">
         <nav role="navigation" aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
-            <div class="container">
-                <a class="navbar-brand" href="/">MyWebClass.org</a>
+            <div class="container flex-divide">
+                <a class="navbar-brand flex-1" href="/">MyWebClass.org</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Toggle navigation</span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="collapse navbar-collapse flex-divide flex-1" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="content.html">Content Template</a>
@@ -69,6 +72,12 @@
     </header>
     <main>
         <div class="container pd-5">
+            <div class="language-switcher"><label for="language-select">Select Language:</label> <select
+                    id="language-select" name="language-select">
+                <option value="en">English</option>
+                <option value="fr">Español</option>
+                <option value="es">हिंदी</option>
+            </select></div>
             <div class="row p-4 pb-0 pe-lg-0 align-items-center rounded-3 border border-round shadow-lg ">
                 <div class="col-lg-7 p-3 p-lg-3 pt-lg-1">
                     <h1 class="display-6 fw-bold lh-1">Revolutionize your teaching</h1>
@@ -77,9 +86,9 @@
                         learning journey.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
                         <a href="get_started.html">
-                        <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Start
-                            Here
-                        </button>
+                            <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Start
+                                Here
+                            </button>
                         </a>
                     </div>
                 </div>
@@ -110,7 +119,8 @@
             <div class="col-sm-3 ">
                 <h5>Connect on Instagram</h5>
                 <ul class="nav">
-                    <li class="nav-item mb-2"><a href="https://www.instagram.com/njit/?hl=en" class="nav-link p-0 text-muted">NJIT<i
+                    <li class="nav-item mb-2"><a href="https://www.instagram.com/njit/?hl=en"
+                                                 class="nav-link p-0 text-muted">NJIT<i
                             class="bi bi-linkedin me-2"></i></a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i
                             class="bi bi-twitter me-2"></i></a>
